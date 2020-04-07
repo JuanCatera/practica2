@@ -1,0 +1,14 @@
+import random
+
+preguntas = [['Buenos Aires limita con Santiago del Estero', 'no'], ['Jujuy limita con Bolivia', 'si'], ['San Juan limita con Misiones', 'no']]
+
+for i in range(len(preguntas)):
+ num_pregunta= random.randrange(len(preguntas))
+ print(preguntas[num_pregunta][0])
+ respuesta= input ('ingrese su respuesta').lower()
+ if respuesta == preguntas[num_pregunta][1]:
+   print ('Acerto')
+ else:
+   print ('Fallo')
+ preguntas.pop(num_pregunta)
+print (preguntas)
